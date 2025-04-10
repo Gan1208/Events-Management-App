@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentListCategory">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        app:cardBackgroundColor="@android:color/holo_green_dark"
+        app:cardCornerRadius="20dp"
+        app:contentPadding="14dp"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerviewCategory"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/categoryIdHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/category_id"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:translationZ="999dp"
+        app:layout_constraintTop_toTopOf="@+id/cardView"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView"
+        app:layout_constraintLeft_toLeftOf="@+id/cardView"
+        app:layout_constraintRight_toLeftOf="@id/categoryNameHeader"/>
+
+
+    <TextView
+        android:id="@+id/categoryNameHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:text="@string/category_name"
+        app:layout_constraintTop_toTopOf="@+id/cardView"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView"
+        app:layout_constraintLeft_toRightOf="@id/categoryIdHeader"
+        app:layout_constraintRight_toLeftOf="@id/eventCountHeader"
+        android:translationZ="999dp" />
+
+    <TextView
+        android:id="@+id/eventCountHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:text="@string/event_count"
+        app:layout_constraintTop_toTopOf="@+id/cardView"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView"
+        app:layout_constraintLeft_toRightOf="@id/categoryNameHeader"
+        app:layout_constraintRight_toLeftOf="@id/isActiveHeader"
+        android:translationZ="999dp"/>
+
+    <TextView
+        android:id="@+id/isActiveHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:text="@string/is_active"
+        app:layout_constraintTop_toTopOf="@+id/cardView"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView"
+        app:layout_constraintLeft_toRightOf="@id/eventCountHeader"
+        app:layout_constraintRight_toRightOf="@+id/cardView"
+        android:translationZ="999dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerviewCategory"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
